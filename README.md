@@ -75,7 +75,7 @@ https://github.com/Gazelle8087/8008-instruction-executor-for-x86
 
 8008用バイナリをロードし上記8008エミュレータを使って  
 実行するローダーです  
-詳細は下記リポジトリそご参照ください。  
+詳細は下記リポジトリをご参照ください。  
 https://github.com/Gazelle8087/8008-loader-for-DOS
 
 ## 8008 CPU について
