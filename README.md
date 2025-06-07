@@ -111,4 +111,6 @@ https://github.com/ryomuk/tangnano-5V/tree/main/applications/TangNano8008MEM
 
 ## 変更履歴
 2025/6/5 Rev. 1.00 初回公開  
-2025/6/7 8080 CP/M用実行ファイル名を変更（CP/Mではアンダーバーが正しく扱えないため）  
+
+2025/6/7 Rev. 1.01 8080用終了メッセージ追加  
+8080 CP/M用実行ファイル名を変更（CP/Mではアンダーバーが正しく扱えないため）  
