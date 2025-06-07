@@ -3,7 +3,7 @@
 ;Gazelle states the copyright about;
 ;Converted old 8008 mnemonics to new 8008 mnemonics.
 ;Added IO routines to match the specifications of the DOS loader.
-;Added startup and IO routines to run on CP/M running an 8080.
+;Added startup and IO routines to run on CP/M.
 ;
 ;	Copyright (C) 2025 by Gazelle
 ;
@@ -33,6 +33,7 @@
 ;https://www.willegal.net/scelbi/the8008andScelbi.html
 ;
 ;2025/6/5 Rev. 1.00 Initial release
+;2025/6/7 Rev. 1.01 added exit messege on 8080code
 ;
 ;;; This is the Scelbi Basic Program from 1974 known as
 ;;; SCELBAL by Mark G. Arnold (MGA) and Nat Wadsworth  
@@ -4293,8 +4294,8 @@ START3000:
 		SHLD	CP_2+1
 		SHLD	CP_3+1
  ENDIF
-		MVI	H,30H
-		MVI	L,00H
+		MVI	H,OPN / 256		;30H
+		MVI	L,OPN - OPN/256*256	;00H
 		CALL	TEXTC
 		MVI	H,1
 		XRA	A
@@ -4320,7 +4321,12 @@ LOAD:		OUT	1FH	; Exit from emulator.
 
  IF		FOR8080
 SAVE:
-LOAD:		JMP	0	; Exit from emulator.(reboot CP/M)
+LOAD:
+		LXI	D,EXIT_MSG
+		MVI	C,9
+		CALL	5
+		JMP	0	; Exit from emulator.(reboot CP/M)
+EXIT_MSG	DB	'Exit from SCELBAL BASIC',0dh,0ah,'$'
  ENDIF
 
 ;;; HERE IS THE USER DEFINED CHARACTER INPUT TO READ FROM SERIAL PORT
