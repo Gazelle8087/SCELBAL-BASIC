@@ -86,6 +86,7 @@ GNDが無い、リセット端子が無い、等、18ピンに収めるため
 http://www.bitsavers.org/components/intel/MCS8/Intel_8008_8-Bit_Parallel_Central_Processing_Unit_Rev1_Apr72.pdf
 
 8008ファンさんのサイトです。  
+日本語のサイトの中では最も情報が充実していると思います。  
 http://www.mars.dti.ne.jp/~mark08/index.html
 
 半導体コレクション展示会場  
